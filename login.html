@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title id="title">Login Hotspot</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="theme-color" content="#3B5998" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="elements/dscountdown.css" media="all">
+
+<script src="elements/bootstrap.js"></script>
+<script src="elements/jquery-min.js"></script> 
+<!--[if lt IE 9]>
+<script src="elements/html5shiv.js"></script>
+<script src="elements/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="elements/dscountdown.min.js"></script>
+<script>
+      jQuery(document).ready(function($){
+              
+        $('.kangndo').dsCountDown({
+          endDate: new Date("April 24, 2020 00:00:00"),
+          theme: 'red'
+        });       
+        
+      });
+    </script> 
+<!-- Edit pada "JAN 01, 2020 00:00:00" dengan BULAN & TANGGAL sesuaikan masa promo gratis vouchernya ( dalam bahasa inggris dibawah ini ) 
+  -- JAN / FEB / MAR / APR / MAY / JUN / JUL / AUG / SEP / OCT / NOV / DEC --
+-->
+
+</head>
+
+<body>
+        $(if chap-id)
+        <form name="sendin" action="$(link-login-only)" method="post">
+            <input type="hidden" name="username" />
+            <input type="hidden" name="password" />
+            <input type="hidden" name="dst" value="$(link-orig)" />
+            <input type="hidden" name="popup" value="true" />
+        </form>
+
+        <script type="text/javascript" src="md5.js"></script>
+        <script type="text/javascript">
+            function doLogin() {
+                document.sendin.username.value = document.login.username.value;
+                document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value +
+                    '$(chap-challenge)');
+                document.sendin.submit();
+                return false;
+            }
+        </script>
+        $(endif)
+
+            <div id="main" class="main">
+                <div class="box">
+                    <center><img src="img/logo2.png" style="margin-bottom: -07px;width: 300px;" /></center>
+            <div class="box">
+            
+			<marquee style="font-family: arial; font-size:13px; color:#08fc20;" >Tim RPL Mengucapkan Selamat Menunaikan Ibadah Puasa 1446 H</marquee>
+            
+                <br><video width="300" autoplay controls loop >
+                    <source src="ramadhan.mp4" type="video/mp4">
+                         </video>
+				<marquee scrolldelay="100" style="font-family: arial; font-size:12px; color:#fcfcfc;" >Marhaban ya Ramadhan! Semoga di bulan suci ini, kita diberi kekuatan untuk menjalani ibadah dengan penuh keikhlasan dan keberkahan.</marquee>
+<!--  start countdown   -->
+<div style="border: 1px dashed #00ffffe0; border-radius: 3px;">
+<div class="rainbow-text">
+<marquee  behavior="alternate">
+<font color="#ff0000">S</font><font color="#ff3300">M</font><font color="#ff6600">K</font><font color="#ff9900">N</font> <font color="#ffcc00">8</font> <font color="#ff9900">J</font><font color="#ffcc00">E</font><font color="#ffff00">M</font><font color="#ccff00">B</font><font color="#99ff00">E</font></font><font color="#99ff00">R</font>
+</marquee>
+<!DOCTYPE html>
+<html>
+<head>
+<title>jam gue</title>
+<script type="text/javascript">
+ window.onload = function() { jam(); }
+
+ function jam() {
+  var e = document.getElementById('jam'),
+  d = new Date(), h, m, s;
+  h = d.getHours();
+  m = set(d.getMinutes());
+  s = set(d.getSeconds());
+
+  e.innerHTML = h +':'+ m +':'+ s;
+
+  setTimeout('jam()', 1000);
+ }
+
+ function set(e) {
+  e = e < 10 ? '0'+ e : e;
+  return e;
+ }
+</script>
+</head>
+<body>
+<center>
+<h1 style="font-size: 10px; font-family: verdana;" id="jam"></h1>
+</center>
+</body>
+</html>
+</div>
+<p class="shadownew" style="margin-top: 2px">WAKTU MENUJU RAMADHAN :</p>
+<center><div class="kangndo"></div></center>
+</div>
+<!--  end countdown   -->
+            </div>
+            <div class="box">
+                <button id="btnvrc" class="small-button" onclick="voucher();"><i class="icon icon-ticket">&#xe802;</i> Voucher</button>
+                <button id="btnmem" class="small-button" onclick="member();"><i class="icon icon-user-circle-o">&#xf2be;</i> Member</button>
+                <!--<button id="qr" class="small-button" onclick="window.location='https://laksa19.github.io/myqr';"> <i class="icon icon-qrcode">&#xe801;</i> QR
+                    Code</button>-->
+            </div>
+            <div class="box" id="infologin">
+            </div>
+            <form autocomplete="off" name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()"
+                $(endif)>
+                <input type="hidden" name="dst" value="$(link-orig)" />
+                <input type="hidden" name="popup" value="true" />
+                <input class="username" name="username" type="text" value="$(username)" />
+                <input class="password" name="password" placeholder="Password" type="hidden" />
+
+                <button class="button" type="submit"><i class="icon icon-login">&#xe803;</i> Login</button>
+
+            </form>
+
+            $(if trial == 'yes')
+            <div class="box">Coba gratis <a style="text-decoration: underline; color:#fff;" href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">klik
+                    di sini</a></div>
+            $(endif)
+
+            $(if error)<div class="notice">$(error)</div>$(endif)
+<!--
+            <table class="table">
+                    <caption style="font-size: 16px; font-weight: bold; color: #ff059d">PAKET INTERNET</caption>
+                    <tr>
+                       <th>Paket</th>
+                        <th>Aktif</th>
+                        <th>Harga</th>
+                        <th>Speed</th>
+                    </tr>
+                    <tr>
+                        <td>Harian</td>
+                        <td>6 Jam</td>
+                        <td>Rp 2.000</td>
+                        <td>1 Mb Unlimited</td>
+                    </tr>
+                     <tr>
+                        <td>Rumahan</td>
+                        <td>1 Bulan</td>
+                        <td>Rp 100.000</td>
+                        <td>1.5 Mb Unlimited</td>
+                    </tr>
+                </table>
+                <br />
+                <div>
+                    Pembelian Voucher bisa datang di AINET
+                </div>
+        </div>
+    -->
+        <br />
+        <div class="box" style="color:#fff;">
+            <i>Copyright &copy; 2025 @aidi</i><br />
+            <!-- <i><a style="color: #ffffff; " href="https://laksa19.github.io">Mikhmon</a></i>
+             Tolong jangan dihilangkan bagian ini-->
+        </div>
+            <!-- Tolong jangan dihilangkan bagian ini -->
+        </div>
+    
+<script type="text/javascript">
+var hostname = window.location.hostname;
+document.getElementById('title').innerHTML = hostname  + " > login";
+
+document.login.username.focus();
+
+var infologin = document.getElementById('infologin');
+infologin.innerHTML = "Masukkan Kode Voucher kemudian klik login.";
+
+// login page 2 mode by Laksamadi Guko
+var username = document.login.username;
+var password = document.login.password;
+
+username.placeholder = "Kode Voucher";
+
+// set password = username
+function setpass() {
+    var user = username.value
+    //user = user.toLowerCase();
+    username.value = user;
+    password.value = user;
+}
+
+username.onkeyup = setpass;
+
+// change to voucher mode
+function voucher() {
+    username.focus();
+    username.onkeyup = setpass;
+    username.placeholder = "Kode Voucher";
+    username.style = "border-radius:3px;"
+    password.type = "hidden";
+    infologin.innerHTML = "Masukkan Kode Voucher kemudian klik login.";
+}
+
+// change to member mode
+function member() {
+    username.focus();
+    username.onkeyup = "";
+    username.placeholder = "Username";
+    username.style = "border-radius:3px 3px 0px 0px;"
+    password.type = "password";
+    infologin.innerHTML = "Masukkan Username dan Password kemudian klik login.";
+}
+</script>
+</body>
+
+</html>
